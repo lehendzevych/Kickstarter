@@ -1,0 +1,15 @@
+.input {
+  @extend %main-text;
+  padding: 11px 36px;
+  background-color: #fff;
+  border: 1px solid #828282;
+  outline: none;
+
+  &::placeholder {
+    color: #bdbdbd;
+  }
+
+  &:focus {
+    border-color: #0c797a;
+  }
+}

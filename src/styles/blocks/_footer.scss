@@ -1,0 +1,74 @@
+.footer {
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+    @include onTablet {
+      gap: 60px;
+    }
+  }
+
+  &__top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__logo {
+    display: none;
+    text-decoration: none;
+
+    @include onTablet {
+      display: flex;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 40px;
+
+    @include onTablet {
+      gap: 50px;
+    }
+
+    @include onDesktop {
+      gap: 40px;
+    }
+  }
+
+  &__social {
+    text-decoration: none;
+  }
+
+  &__fb {
+    &:hover * {
+      fill: #4267b2;
+    }
+  }
+
+  &__twit {
+    &:hover * {
+      fill: #1da1f2;
+    }
+  }
+
+  &__inst {
+    &:hover * {
+      fill: url(#brand-gradient);
+    }
+  }
+
+  &__text {
+    @extend %secondary-text;
+    text-align: center;
+    color: #bdbdbd;
+  }
+}

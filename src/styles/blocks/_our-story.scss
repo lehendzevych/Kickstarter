@@ -1,0 +1,76 @@
+.our-story {
+  position: relative;
+  overflow: hidden;
+
+  @include onDesktop {
+    min-height: 381px;
+  }
+
+  &__container {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__img {
+    background-image: url(../images/mobile/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    padding-bottom: 77%;
+    margin-bottom: 40px;
+
+    @include onTablet {
+      position: absolute;
+      bottom: 0;
+      right: calc((100vw - 700px) / 2);
+
+      width: 430px;
+      height: 317px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      background-image: url(../images/tablet/1.jpg);
+    }
+
+    @include onDesktop {
+      margin-bottom: 0;
+      position: absolute;
+      bottom: 0;
+      right: calc((100vw - 1194px) / 2);
+
+      width: 816px;
+      height: 464px;
+      background-image: url(../images/desktop/1.jpg);
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      width: 340px;
+      margin-bottom: 30px;
+    }
+
+    @include onDesktop {
+      width: 378px;
+    }
+  }
+
+  &__description {
+    position: relative;
+
+    @include onTablet {
+      display: block;
+      width: 250px;
+    }
+
+    @include onDesktop {
+      width: 276px;
+    }
+  }
+}

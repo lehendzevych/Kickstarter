@@ -1,0 +1,116 @@
+.benefits {
+  &__menu {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 84px;
+
+      height: 76px;
+      margin-bottom: 62px;
+    }
+  }
+
+  &__menu-link {
+    @extend %thirdary-text;
+
+    width: 105px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      color: #131313;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__cards {
+    display: flex;
+    transition: all 0.3s ease;
+    --scroll: 0;
+    transform: translateX(var(--scroll));
+
+    @include onTablet {
+      flex-wrap: wrap;
+      gap: 20px;
+      transition: none;
+      transform: none;
+    }
+
+    @include onDesktop {
+      gap: 30px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+
+    @include onTablet {
+      max-width: 340px;
+    }
+
+    @include onDesktop {
+      max-width: 276px;
+    }
+  }
+
+  &__card-svg {
+    margin-bottom: 30px;
+  }
+
+  &__card-title {
+    height: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+
+    @include onDesktop {
+      height: 56px;
+    }
+  }
+
+  &__card-description {
+    @extend %secondary-text;
+    display: block;
+    color: #7c7c7c;
+    text-align: center;
+  }
+
+  &__dots {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__dot {
+    padding: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #7c7c7c;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &--active {
+      background-color: #333;
+      cursor: default;
+    }
+  }
+}

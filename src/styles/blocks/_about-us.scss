@@ -1,0 +1,154 @@
+.about-us {
+
+  &__card {
+    position: relative;
+    margin-bottom: 110px;
+
+    @include onTablet {
+      margin-bottom: 140px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 170px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__card-content {
+    display: block;
+  
+    @include onTablet {
+      height: 415px;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: auto auto 1fr;
+      column-gap: 20px;
+    }
+  
+    @include onDesktop {
+      height: 388px;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+    }
+  }
+
+  &__card-title {
+    margin-bottom: 30px;
+
+    @include onTablet {
+      grid-row: 1 / 2;
+      grid-column: 5 / 9;
+    }
+
+    @include onDesktop {
+      grid-column: 7 / 13;
+    }
+  }
+
+  &__card-img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      width: 49%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      grid-row: 1 / 4;
+      grid-column: 1 / 5;
+    }
+
+    @include onDesktop {
+      width: 100%;
+      position: static;
+      grid-column: 1 / 7;
+    }
+  }
+
+  &__card-description {
+    @extend %main-text;
+    color: #7c7c7c;
+    margin-bottom: 30px;
+
+    @include onTablet {
+      grid-row: 2 / 3;
+      grid-column: 5 / 9;
+    }
+
+    @include onDesktop {
+      margin-bottom: 60px;
+      grid-column: 7 / 13;
+    }
+  }
+
+  &__card-button {
+    position: relative;
+    @extend %button-text;
+    width: 127px;
+    height: 20px;
+    color: #0db2b3;
+    background-color: transparent;
+    border: 0;
+    padding: 0 0 6px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      width: 53px;
+      height: 1px;
+
+      background-color: #0db2b3;
+      transition: all 0.3s ease-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    @include onTablet {
+      grid-row: 3 / 4;
+      grid-column: 5 / 9;
+    }
+
+    @include onDesktop {
+      grid-column: 7 / 13;
+    }
+  }
+
+  &__card:nth-child(2n) {
+    .about-us__card-title,
+    .about-us__card-description,
+    .about-us__card-button {
+      @include onTablet {
+        grid-column: 1 / 5;
+      }
+
+      @include onDesktop {
+        grid-column: 1 / 7;
+      }
+    }
+
+    .about-us__card-img {
+      @include onTablet {
+        right: 0;
+        left: unset;
+      }
+
+      @include onDesktop {
+        grid-column: 7 / 13;
+      }
+    }
+  }
+}

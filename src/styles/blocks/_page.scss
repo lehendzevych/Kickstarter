@@ -1,0 +1,38 @@
+.page {
+  @extend %main-text;
+
+  &__body {
+    background-color: #f7f7f7;
+    color: #333;
+  }
+
+  &__header {
+    @include onTablet {
+      margin: 30px 0 130px;
+    }
+
+    @include onDesktop {
+      margin: 30px 0 170px;
+    }
+  }
+
+  &__footer {
+    padding-bottom: 20px;
+
+    @include onTablet {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__section {
+    margin-bottom: 110px;
+
+    @include onTablet {
+      margin-bottom: 140px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 170px;
+    }
+  }
+}

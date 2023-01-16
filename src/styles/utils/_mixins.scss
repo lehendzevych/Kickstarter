@@ -4,3 +4,24 @@
     #{$_property}: $_toValue;
   }
 }
+
+@mixin square($width) {
+  width: $width;
+  height: $width;
+}
+
+@mixin transition {
+  transition: all 0.3s linear;
+}
+
+@mixin onTablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
+}
