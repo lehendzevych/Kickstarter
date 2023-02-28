@@ -1,6 +1,6 @@
 .testimonilas {
 
-  &__content {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,6 +46,7 @@
   }
 
   &__name {
+    @extend %h5;
     display: block;
     margin-bottom: 5px;
   }

@@ -16,10 +16,12 @@
   &__menu-link {
     @extend %thirdary-text;
 
-    width: 105px;
+    display: block;
+    width: 106px;
     color: #333;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
 
     &:hover {
       color: #131313;
@@ -29,7 +31,7 @@
     }
   }
 
-  &__content {
+  &__cards-wrapper {
     overflow: hidden;
   }
 
@@ -67,11 +69,12 @@
     }
   }
 
-  &__card-svg {
+  &__card-icon {
     margin-bottom: 30px;
   }
 
   &__card-title {
+    @extend %h4;
     height: 28px;
     margin-bottom: 24px;
     text-align: center;
