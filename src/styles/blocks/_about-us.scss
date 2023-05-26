@@ -1,4 +1,7 @@
 .about-us {
+  &__title {
+    @include hide-text;
+  }
 
   &__card {
     position: relative;
@@ -36,6 +39,7 @@
   }
 
   &__card-title {
+    @extend %h2;
     margin-bottom: 30px;
 
     @include onTablet {

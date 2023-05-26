@@ -1,9 +1,11 @@
 .presentation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  &__title {
+    @include hide-text;
+  }
 
   &__img {
+    display: flex;
+    margin: 0 auto;
     mix-blend-mode: darken;
   }
 }

@@ -1,4 +1,8 @@
 .benefits {
+  &__title {
+    @include hide-text;
+  }
+
   &__menu {
     display: none;
 

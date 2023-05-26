@@ -4,18 +4,19 @@
   }
 
   &__container {
-    position: relative;
-    padding: 0;
+    @include onSmartphone {
+      padding: 0;
+    }
   }
 
-  &__lists-wrapper {
+  &__content {
+    position: relative;
     padding: 30px 32px 0;
     background-color: #d6ecec;
     overflow: hidden;
 
     @include onTablet {
       padding: 60px 90px 0;
-      position: static;
     }
 
     @include onDesktop {
@@ -23,10 +24,11 @@
     }
   }
 
-  &__lists {
+  &__items {
+    --scroll: 0;
+
     display: flex;
     transition: all 0.3s ease;
-    --scroll: 0;
     transform: translateX(var(--scroll));
 
     @include onDesktop {
@@ -38,7 +40,7 @@
     }
   }
 
-  &__list {
+  &__article {
     width: 110%;
     flex-shrink: 0;
     margin-bottom: 50px;
@@ -65,12 +67,12 @@
     }
   }
 
-  &__list-title {
+  &__article-title {
     margin-bottom: 20px;
     color: #0c797a;
   }
 
-  &__list-item {
+  &__article-list_el {
     position: relative;
     padding-left: 16px;
     margin-bottom: 10px;
@@ -174,7 +176,7 @@
     color: #0c797a;
   }
 
-  &__bg {
+  &__content-bg {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -194,7 +196,7 @@
     }
   }
 
-  &__bg-img {
+  &__content-bg_img {
     width: 96%;
     height: 96%;
 

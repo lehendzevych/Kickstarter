@@ -35,4 +35,13 @@
       margin-bottom: 170px;
     }
   }
+
+  &__nav {
+    margin-bottom: 62px;
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+    }
+  }
 }

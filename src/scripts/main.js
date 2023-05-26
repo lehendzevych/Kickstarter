@@ -30,7 +30,7 @@ class Slider {
   }
 }
 
-const featuresLists = document.getElementById('featuresLists');
+const featuresLists = document.getElementById('featuresItems');
 const featuresPrevButton = document.getElementById('featuresPrev');
 const featuresNextButton = document.getElementById('featuresNext');
 const featuresSliderActivePage = document.querySelector(
