@@ -1,0 +1,69 @@
+.testimonials {
+  &__title {
+    @include hide-text;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 62px;
+    text-align: center;
+  }
+
+  &__testimonial {
+    padding-top: 42px;
+    background-size: 208px 171px;
+
+    @include onTablet {
+      background-size: 233px 189px;
+      padding-top: 60px;
+    }
+
+    @include onDesktop {
+      padding-top: 42px;
+    }
+
+    background-image: url("../../src/images/desktop/qoute.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+  }
+
+  &__story {
+    @extend %qoute-text;
+    display: block;
+    max-width: 465px;
+    margin-bottom: 30px;
+    text-align: center;
+
+    @include onTablet {
+      margin-bottom: 40px;
+      max-width: 700px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 30px;
+      max-width: 786px;
+    }
+  }
+
+  &__photo {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    @extend %h5;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: none;
+  }
+
+  &__occupation {
+    @extend %secondary-text;
+    display: block;
+    color: #7c7c7c;
+  }
+}

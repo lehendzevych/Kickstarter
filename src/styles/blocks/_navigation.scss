@@ -1,0 +1,33 @@
+.navigation {
+  width: 100%;
+  height: 76px;
+
+  &__list {
+    @include onDesktop {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 84px;
+    }
+  }
+
+  &__link {
+    @extend %thirdary-text;
+
+    display: block;
+    width: 106px;
+    color: #333;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #131313;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
